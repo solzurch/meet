@@ -1,7 +1,6 @@
-Project Features & Scenarios
+# PROJECT FEATURES AND SCENARIOS
 
-Feature: Filter Events By City
-
+### Feature: Filter Events By City
 Scenario: When user hasn’t searched for a city, show upcoming events from all cities. 
 Given the events app is open 
 When I view the list of upcoming events 
@@ -17,8 +16,7 @@ Given the events app is open
 When I select a city from the suggested list 
 Then the events list should be filtered for the selected city
 
-Feature: Show/Hide Event Details
-
+### Feature: Show/Hide Event Details
 Scenario: An event element is collapsed by default. 
 Given the events app is open 
 When I view the list of events 
@@ -34,8 +32,7 @@ Given the events app is open And an event details are visible
 When I click on the collapse button 
 Then the details of that event should be hidden
 
-Feature: Specify Number of Events
-
+### Feature: Specify Number of Events
 Scenario: When user hasn’t specified a number, 32 events are shown by default. 
 Given the events app is open 
 When I view the list of events 
@@ -46,8 +43,7 @@ Given the events app is open
 When I specify the number of events as 50 
 Then I should see 50 events displayed
 
-Feature: Use the App When Offline
-
+### Feature: Use the App When Offline
 Scenario: Show cached data when there’s no internet connection. 
 Given the events app is open And there is no internet connection 
 When I view the list of events 
@@ -58,21 +54,23 @@ Given the events app is open And there is no internet connection
 When I try to change search settings 
 Then I should see an error message
 
-Feature: Add an App Shortcut to the Home Screen
-
+### Feature: Add an App Shortcut to the Home Screen
 Scenario: User can install the meet app as a shortcut on their device home screen. 
 Given the events app is open 
 When I choose to add the app to the home screen 
 Then a shortcut to the meet app should be added to the device home screen
 
-Feature: Display Charts Visualizing Event Details
-
+### Feature: Display Charts Visualizing Event Details
 Scenario: Show a chart with the number of upcoming events in each city. 
 Given the events app is open 
 When I navigate to the charts section 
 Then I should see a chart displaying the number of upcoming events in each city
 
+****
 
-USE OF SERVERLESS FUNCTION IN THE MEET APP
+# USE OF SERVERLESS FUNCTION IN THE MEET APP
 
 The Meet App can use serverless functions for event notifications, real-time data processing, user authentication, event recommendations, , and scalability. By leveraging serverless technology, the app can efficiently handle backend processes, provide personalized experiences, and scale according to user demand.
+
+
+****
