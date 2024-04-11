@@ -1,17 +1,22 @@
 import { render } from "@testing-library/react";
 import App from "../App";
+import userEvent from "@testing-library/user-event";
+import { getEvents } from "../api";
 
 describe("<App /> component", () => {
-  let AppDOM;
+  let appDom;
   beforeEach(() => {
-    AppDOM = render(<App />).container.firstChild;
+    appDom = render(<App />).container.firstChild;
   });
-
   test("renders list of events", () => {
-    expect(AppDOM.querySelector("#event-list")).toBeInTheDocument();
+    expect(appDom.querySelector("#event-list")).toBeInTheDocument();
   });
 
   test("render CitySearch", () => {
-    expect(AppDOM.querySelector("#city-search")).toBeInTheDocument();
+    expect(appDom.querySelector("#city-search")).toBeInTheDocument();
+  });
+
+  test("render NumberOfEvents", () => {
+    expect(appDom.querySelector("#numberOfEvents")).toBeInTheDocument();
   });
 });
