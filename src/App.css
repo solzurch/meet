@@ -2,7 +2,7 @@
 
 .App {
   text-align: center;
-  padding: 2% 5%;
+  color: rgb(147, 28, 87);
 }
 
 .App * {
@@ -23,7 +23,7 @@ input[type="number"] {
   padding: 8px 6px 8px 10px;
   border-radius: 4px;
   outline: none;
-  border: 1px solid #ccc;
+  border: 1px solid #e8c9c9;
   font-size: 14px;
   line-height: 20px;
   align-self: center;
@@ -56,7 +56,7 @@ input[type="number"] {
 .suggestions>li {
   text-align: left;
   padding: 8px 6px 8px 10px;
-  background-color: #eee;
+  background-color: #ebc4c4;
   cursor: default;
 }
 
@@ -76,6 +76,8 @@ input[type="number"] {
   border: 1px solid #ccc;
   border-radius: 4px;
   position: relative;
+  color: rgb(147, 28, 87);
+  ;
 }
 
 .details-btn {
@@ -86,4 +88,9 @@ input[type="number"] {
   border-radius: 4px;
   outline: none;
   cursor: pointer;
+  color: rgb(147, 28, 87);
+}
+
+body {
+  background-color: rgb(216, 212, 237);
 }
