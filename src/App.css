@@ -1,9 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:500);
 
-.App {
-  text-align: center;
-  color: rgb(147, 28, 87);
-}
+
 
 .App * {
   box-sizing: border-box;
