@@ -6,9 +6,15 @@ export const extractLocations = (events) => {
   return locations;
 };
 
+// This function will fetch the list of all events
 export const getEvents = async () => {
   if (window.location.href.startsWith("http://localhost")) {
     return mockData;
+  }
+
+  if (!navigator.onLine) {
+    const events = localStorage.getItem("lastEvents");
+    return events ? JSON.parse(events) : [];
   }
 
   const token = await getAccessToken();
@@ -16,12 +22,13 @@ export const getEvents = async () => {
   if (token) {
     removeQuery();
     const url =
-      "https://kuiag27788.execute-api.eu-central-1.amazonaws.com/dev/api/get-events" +
+      "https://9l2n3s5udh.execute-api.eu-central-1.amazonaws.com/dev/api/get-events" +
       "/" +
       token;
     const response = await fetch(url);
     const result = await response.json();
     if (result) {
+      localStorage.setItem("lastEvents", JSON.stringify(result.events));
       return result.events;
     } else return null;
   }
